@@ -106,7 +106,8 @@
         // DEV: 'http://localhost:3333'
         // PROD: 'https://sps.sigs.com.br'
         // ==========================================
-        const API_BASE_URL = 'http://localhost:3333';
+        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        const API_BASE_URL = isLocal ? 'http://localhost:3333' : 'https://sps.sigs.com.br';
         // ==========================================
 
         const telInput = document.getElementById('telefone');
